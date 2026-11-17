@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ data.name }} — Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Plus+Jakarta+Sans:wght@400;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+<div class="scan-grid" aria-hidden="true"></div>
+<main class="landing-wrap">
+  <div class="landing-photo">
+    <img src="{{ url_for('static', filename=data.profile_pic) }}" alt="{{ data.name }}"
+         onerror="this.style.visibility='hidden'">
+  </div>
+  <p class="terminal-line">&gt; whoami</p>
+  <h1 class="hero-name">{{ data.name }}</h1>
+  <p class="hero-tagline">Choose the portfolio that matches the role you're hiring for.</p>
+
+  <div class="role-cards">
+    <a class="role-card sde" href="{{ url_for('portfolio', role='sde') }}">
+      <span class="role-emoji">💻</span>
+      <h2>Software Developer</h2>
+      <p>Python · Flask · SQL · Web projects</p>
+      <span class="role-go">Open portfolio →</span>
+    </a>
+    <a class="role-card cyber" href="{{ url_for('portfolio', role='cyber') }}">
+      <span class="role-emoji">🛡️</span>
+      <h2>Cybersecurity</h2>
+      <p>SOC · Pentesting · Nmap · Burp Suite</p>
+      <span class="role-go">Open portfolio →</span>
+    </a>
+  </div>
+
+  <div class="social-row">
+    <a class="social-chip chip-linkedin" href="{{ data.linkedin }}" target="_blank" rel="noopener"><span class="chip-icon">in</span> LinkedIn</a>
+    <a class="social-chip chip-github" href="{{ data.github }}" target="_blank" rel="noopener"><span class="chip-icon">gh</span> GitHub</a>
+    <a class="social-chip chip-leetcode" href="{{ data.leetcode }}" target="_blank" rel="noopener"><span class="chip-icon">lc</span> LeetCode</a>
+    <a class="social-chip chip-email" href="mailto:{{ data.email }}"><span class="chip-icon">@</span> Email</a>
+  </div>
+</main>
+</body>
+</html>
