@@ -20,9 +20,9 @@ COMMON = {
     "profile_pic": "img/profile.png",
     "email": "varshinijatheshwaran@gmail.com",
     "location": "Coimbatore, India",
-    "linkedin": "https://linkedin.com/in/varshini-j",          # ⚠️
+    "linkedin": "https://www.linkedin.com/in/varshini-jagatheshwaran-9893b0293",          # ⚠️
     "github": "https://github.com/Varshini-2356",
-    "leetcode": "https://leetcode.com/Varshini56",              # ⚠️
+    "leetcode": "https://leetcode.com/u/Varshini56/",              # ⚠️
     "education": {
         "school": "Sri Shakthi Institute of Engineering and Technology, Coimbatore",
         "degree": "B.E. Computer Science Engineering (Cyber Security)",
